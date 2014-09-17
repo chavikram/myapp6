@@ -9,7 +9,11 @@
 %p
   %b Price:
   = @product.price
-
+%p
+  %p Properties:
+  - @product.properties.each do |p|
+    %p= p.name
+  
 = link_to 'Edit', edit_product_path(@product)
 \|
 = link_to 'Back', products_path

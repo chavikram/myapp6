@@ -1,10 +1,13 @@
-= simple_form_for(@product) do |f|
+= simple_nested_form_for(@product) do |f|
   = f.error_notification
 
   .form-inputs
     = f.input :name
     = f.input :address
     = f.input :price
-
+  = f.simple_fields_for :properties do |p|
+    = p.input :name, label:"Property Name:"
+    = p.link_to_remove "Remove this property"
+  = f.link_to_add "Add a task", :properties
   .form-actions
     = f.button :submit

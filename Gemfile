@@ -31,6 +31,7 @@ gem 'schema_plus'             # add better index and foreign key support
 gem 'sass-rails'
 gem 'haml-rails'
 gem 'simple_form'
+gem 'nested_form'
 gem 'uglifier'
 gem 'headjs-rails'
 

@@ -1,0 +1,25 @@
+%h1 Listing fees
+
+%table
+  %tr
+    %th Adm fee
+    %th Annual fee
+    %th Mis fee
+    %th Year
+    %th
+    %th
+    %th
+
+  - @fees.each do |fee|
+    %tr
+      %td= fee.adm_fee
+      %td= fee.annual_fee
+      %td= fee.mis_fee
+      %td= fee.year
+      %td= link_to 'Show', fee
+      %td= link_to 'Edit', edit_fee_path(fee)
+      %td= link_to 'Destroy', fee, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Fee', new_fee_path

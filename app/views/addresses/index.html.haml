@@ -1,0 +1,31 @@
+%h1 Listing addresses
+
+%table
+  %tr
+    %th Plot no
+    %th Street
+    %th Colony
+    %th City
+    %th State
+    %th Country
+    %th Pin code
+    %th
+    %th
+    %th
+
+  - @addresses.each do |address|
+    %tr
+      %td= address.plot_no
+      %td= address.street
+      %td= address.colony
+      %td= address.city
+      %td= address.state
+      %td= address.country
+      %td= address.pin_code
+      %td= link_to 'Show', address
+      %td= link_to 'Edit', edit_address_path(address)
+      %td= link_to 'Destroy', address, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Address', new_address_path

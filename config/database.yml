@@ -18,6 +18,7 @@ development:
   adapter: postgresql
   encoding: unicode
   #database: <%= Rails.application.config.settings.app_name %>_development
+  host: localhost
   database: test3
   pool: 5
   username: test2
@@ -48,15 +49,17 @@ test:
   adapter: postgresql
   encoding: unicode
   #database: <%= Rails.application.config.settings.app_name %>_test
+  host: localhost
   database: test3
   pool: 5
   username: test2
   password: 
-
+    
 production:
   adapter: postgresql
   encoding: unicode
   #database: <%= Rails.application.config.settings.app_name %>_production
+  host: localhost
   database: test3
   pool: 5
   username: test2

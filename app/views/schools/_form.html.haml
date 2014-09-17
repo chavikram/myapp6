@@ -1,0 +1,30 @@
+%div
+  = simple_nested_form_for(@school) do |f|
+    = f.error_notification
+
+    .form-inputs
+    
+      = f.input :name
+      = f.input :name_in_hindi
+      = f.input :brief
+      = f.input :established_in
+      = f.input :contact_no
+    = f.simple_fields_for :addresses do |p|
+      = p.input :plot_no, label:"Plot No:"
+      = p.input :street, label:"Street:"
+      = p.input :colony, label:"Colony:"
+      = p.input :city, label:"City:"
+      = p.input :state, label:"State:"
+      = p.link_to_remove "Remove this Address"
+    = f.link_to_add "Add an Address", :addresses
+  
+    = f.simple_fields_for :fees do |p|
+      = p.input :adm_fee
+      = p.input :annual_fee
+      = p.input :mis_fee
+      = p.input :year
+      = p.link_to_remove "Remove this Fee"
+    = f.link_to_add "Add a Fee", :fees
+    
+    .form-actions
+      = f.button :submit

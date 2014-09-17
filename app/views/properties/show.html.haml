@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @property.name
+%p
+  %b Value:
+  = @property.value
+%p
+  %b Product:
+  = @property.product_id
+
+= link_to 'Edit', edit_property_path(@property)
+\|
+= link_to 'Back', properties_path

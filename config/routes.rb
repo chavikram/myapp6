@@ -1,5 +1,15 @@
 # Route prefixes use a single letter to allow for vanity urls of two or more characters
 Rails.application.routes.draw do
+  resources :boards
+
+  resources :addresses
+
+  resources :fees
+
+  resources :schools
+
+  resources :properties
+
   resources :products
 
   if defined? Sidekiq

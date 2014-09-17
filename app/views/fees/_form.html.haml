@@ -1,0 +1,11 @@
+= simple_form_for(@fee) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :adm_fee
+    = f.input :annual_fee
+    = f.input :mis_fee
+    = f.input :year
+
+  .form-actions
+    = f.button :submit

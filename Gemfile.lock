@@ -370,6 +370,7 @@ DEPENDENCIES
   jquery-turbolinks
   memcachier
   minitest
+  nested_form
   newrelic_rpm
   nprogress-rails
   omniauth

@@ -1,0 +1,56 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @school.name
+%p
+  %b Name in hindi:
+  = @school.name_in_hindi
+%p
+  %b Brief:
+  = @school.brief
+%p
+  %b Established in:
+  = @school.established_in
+%p
+  %b Fee:
+  = @school.fee_id
+%p
+  %b Contact no:
+  = @school.contact_no
+
+%div
+  %b Fees:
+  %div
+    - @school.fees.each do |fee|
+      %b Admission Fee:
+      %b= fee.adm_fee
+      %br
+      %b Annual Fee:
+      %b= fee.annual_fee
+      %br
+      %b Miscellenous Fee:
+      %b= fee.mis_fee
+      %br
+      %b Year:
+      %b= fee.year
+      %br
+
+%div
+  %b Address:
+  %div
+    - @school.addresses.each do |address|
+      
+      %b Plot No:
+      %b= address.plot_no
+      %br
+      %b Colony:
+      %b= address.colony
+      %br
+      %b City:
+      %b= address.city
+      %br 
+      %b State:
+      %b= address.state
+
+= link_to 'Edit', edit_school_path(@school)
+= link_to 'Back', schools_path

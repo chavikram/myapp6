@@ -9,9 +9,8 @@ class Ability
   def initialize(user = User.new)
     can :manage, User, id: user.id
     can :manage, Authentication, user_id: user.id
-    can :show, Product      # included in :read
-    can :edit, Product      # included in :update
-
+    can :read, Product      # included in :read
+    can :update, Product
     if user.is_admin? && defined? RailsAdmin
       # Allow everything
       can :manage, :all

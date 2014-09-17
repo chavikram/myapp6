@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Plot no:
+  = @address.plot_no
+%p
+  %b Street:
+  = @address.street
+%p
+  %b Colony:
+  = @address.colony
+%p
+  %b City:
+  = @address.city
+%p
+  %b State:
+  = @address.state
+%p
+  %b Country:
+  = @address.country
+%p
+  %b Pin code:
+  = @address.pin_code
+
+= link_to 'Edit', edit_address_path(@address)
+\|
+= link_to 'Back', addresses_path
