@@ -74,6 +74,7 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.default_url_options = { host: ENV['MAIL_HOST'] }
+
   config.action_mailer.smtp_settings = {
     user_name:      ENV['SENDGRID_USERNAME'],
     password:       ENV['SENDGRID_PASSWORD'],
@@ -86,17 +87,18 @@ Rails.application.configure do
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found).
+  
   config.i18n.fallbacks = true
-
   # Send deprecation notices to registered listeners.
+  
   config.active_support.deprecation = :notify
-
   # Disable automatic flushing of the log to improve performance.
   # config.autoflush_log = false
-
+  
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
-
+  
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
 end
